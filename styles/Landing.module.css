@@ -1,0 +1,303 @@
+.container {
+  height: 100vh;
+  display: inline;
+}
+
+.landingTitleDisplay {
+  background-color: #0b0e11;
+  height: 43vw;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .landingTitleDisplay {
+    height: 60vw;
+  }
+}
+
+.landingTitleDisplay svg {
+  position: absolute;
+  bottom: -1px;
+  z-index: 2;
+}
+
+.landingTitle {
+  color: white;
+  font-size: 4.3vw;
+  text-align: center;
+  margin: 0;
+  padding-top: 3vw;
+}
+
+@media only screen and (max-width: 900px) {
+  .landingTitle {
+    font-size: 7vw;
+  }
+}
+
+.yellow {
+  color: #e4c233;
+}
+
+.socialmedia {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 0;
+  align-items: center;
+}
+.twitter {
+  width: 125px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .twitter {
+    width: 18vw;
+  }
+}
+
+.discord {
+  width: 84px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .discord {
+    width: 11vw;
+  }
+}
+
+.argonaut {
+  position: absolute;
+  height: 36vw;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  margin: auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+@media only screen and (max-width: 900px) {
+  .argonaut {
+    height: 57vw;
+  }
+}
+
+.fill {
+  position: relative;
+  display: grid;
+}
+
+
+.earth {
+  position: absolute;
+  z-index: 1;
+  width: 4vw;
+  right: 0;
+  opacity: 0.3;
+  margin: auto;
+  left: 72%;
+  top: 8%;
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .earth {
+    top: 15%;
+    left: 80%;
+  }
+}
+
+.moon {
+  position: absolute;
+  z-index: 1;
+  width: 5vw;
+  left: 0;
+  opacity: 0.3;
+  margin: auto;
+  right: 72%;
+  top: 14%;
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .moon {
+    top: 15%;
+    right: 80%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+.subtitle {
+  position: relative;
+  color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  font-size: 2.4vw;
+  background: #262626 -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#262626),
+      to(#262626),
+      color-stop(0.5, #fff)
+    ) 0 0 no-repeat;
+  animation: animate 5s infinite;
+  -webkit-background-size: 150px;
+  background-size: 150px;
+  color: rgba(255, 255, 255, 0.1);
+  -webkit-background-clip: text;
+  padding: 1vw;
+  z-index: 3;
+}
+
+.emailForm {
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+
+@keyframes animate {
+  0%,
+  10% {
+    background-position: -1000px;
+  }
+  20% {
+    background-position: top left;
+  }
+  80% {
+    background-position: top right;
+  }
+  100% {
+    background-position: 1000px;
+  }
+}
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: block;
+  z-index: 5;
+  transform: translateY(-6vw);
+  width: 66rem;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 1300px) {
+  .logo {
+    width: 83vw;
+    transform: translateY(-5vw);
+  }
+}
+
+.hal {
+  height: 100rem;
+}
+
+.jobList {
+  position: relative;
+  justify-self: center;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  align-items: center;
+  padding-top: 7px;
+}
+
+@media only screen and (max-width: 499px) {
+  .jobList {
+    margin-top: 2rem;
+  }
+}
+
+.jobList ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+
+
+.salaryRangeSelector {
+  list-style-type: none;
+  margin: 0;
+  left: 0;
+  background: #fbfbfb;
+  color: #0b0e11;
+  position: absolute;
+  transform: translate(0, 10px);
+  z-index: 9;
+  border-radius: 1rem;
+  padding: 1rem;
+  grid-gap: 0.4rem;
+  gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px, rgb(51 51 51) 0px 0px 0px 2px;
+}
+
+.autosuggestion li {
+  padding: 7px 10px;
+}
+
+
+
+
+
+@keyframes stars {
+  0% {
+    transform: translate(-15vw, -11vw) rotate(32deg);
+  }
+
+  100% {
+    transform: translate(60vw, 38vw) rotate(32deg);
+  }
+}
+
+.square {
+  position: absolute;
+  width: 14vw;
+  height: 7vw;
+  background-color: #0b0e1130;
+  transform: translate(-15vw, -11vw) rotate(32deg);
+  z-index: 4;
+  border-radius: 1rem;
+  animation: stars 15s infinite;
+  animation-timing-function: linear;
+}
+
+.centerChips {
+  display: flex;
+  place-self: center;
+  width: 53%;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 1rem;
+}

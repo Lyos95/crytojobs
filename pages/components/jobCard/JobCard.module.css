@@ -1,0 +1,240 @@
+.jobCardContainer {
+  width: 69rem;
+  position: relative;
+  border-radius: 1.7rem;
+  background: white;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.jobCard_mainInfo_badges {
+  display: flex;
+}
+
+.jobCard_bottomInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.jobCard_content {
+  min-width: fit-content;
+}
+
+.jobCard_extraInfo_badges {
+  display: flex;
+  flex-flow: wrap;
+  row-gap: 5px;
+  place-content: center;
+}
+
+.jobCard_mainInfo {
+  display: flex;
+  min-width: fit-content;
+}
+
+.jobCard_extraInfo {
+  display: flex;
+  align-items: center;
+}
+
+.jobCard_extraInfo_apply {
+  margin: 1rem 0;
+}
+
+
+
+.button-apply-bottom {
+  display: none;
+}
+
+.button-apply {
+  background: #ff5858;
+  padding: 8px 13px;
+  font-size: 1.1rem;
+  border-radius: 13px;
+  color: white;
+  font-family: system-ui;
+  font-weight: 500;
+  margin-right: 39px;
+  cursor: pointer;
+}
+
+.button-apply:hover {
+  background: #e33434;
+  color: #fff;
+}
+
+.tags {
+  align-self: center;
+  max-width: 46%;
+  justify-self: center;
+  max-width: 100%;
+}
+
+.iconCard {
+  width: 4rem;
+  height: 4rem;
+  align-self: center;
+  margin: 0 1rem;
+}
+
+.iconCardLogo {
+  width: 4rem;
+  height: 4rem;
+  align-self: center;
+  margin: 0 1rem;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  min-width: 5.3rem;
+  min-height: 5.3rem;
+}
+
+.jobCard {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 12px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 40% 35% 7% 8%;
+}
+
+.jobCard_companyName{
+  padding-top: 11px;
+  font-weight: 500;
+}
+
+.jobCard_content h4 {
+  margin: 0;
+  margin-top: 9px;
+  margin-bottom: 1px;
+}
+
+.jobCard_publish{
+  align-self: center;
+}
+
+@media only screen and (max-width: 1150px) {
+  .jobCardContainer {
+    width: 94vw;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .jobCard_mainInfo_badges {
+    margin-bottom: 8px;
+    margin-top: 12px;
+  }
+
+  .jobCard_content h4 {
+    font-size: 2.3vw;
+  }
+
+
+
+  .button-apply-bottom {
+    background: #ff5858;
+    padding: 6px 11px;
+    font-size: 0.65rem;
+    border-radius: 13px;
+    color: white;
+    font-family: system-ui;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .iconCard {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  }
+
+
+@media only screen and (max-width: 1000px) {
+  .jobCard_content h4 {
+    font-size: 1.1rem;
+    margin: 0;
+    margin-top: 12px;
+    
+  }
+
+  .jobCard {
+    grid-template-columns: 72% 12% 13%;
+  }
+  
+
+
+  .tags {
+    display: none;
+  }
+
+  .iconCard {
+    width: 7vw;
+    height: 7vw;
+  }
+
+
+}
+
+@media only screen and (max-width: 560px) {
+  .jobCard_content h4 {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+
+  .iconCardLogo {
+    width: 4rem;
+    height: 4rem;
+    align-self: center;
+    margin: 0 1rem;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    min-width: 4rem;
+    min-height: 4rem;
+  }
+  .button-apply-bottom {
+    background: #ff5858;
+    padding: 6px 11px;
+    font-size: 1rem;
+    border-radius: 13px;
+    color: white;
+    font-family: system-ui;
+    font-weight: 500;
+    cursor: pointer;
+    position: absolute;
+    right: 9px;
+    bottom: 8px;
+    display: inline-block;
+  }
+
+  .jobCard_extraInfo {
+    display: none;
+  }
+
+  .jobCard_publish{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .iconCard {
+    width: 46px;
+    height: 46px;
+  }
+
+
+}

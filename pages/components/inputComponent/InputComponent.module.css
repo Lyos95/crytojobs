@@ -1,0 +1,77 @@
+.jobPostForm{
+    background: #f7f7f7;
+    border: none !important;
+    border: none;
+    box-shadow:rgb(0 0 0 / 2%) 0px 1px 3px 0px, rgb(27 31 35 / 15%) 0px 0px 0px 1px;
+    width:  100% !important;
+}
+
+.jobPostFilter {
+    background: #f7f7f7;
+    color: rgba(17, 17, 17, 0.959);
+}
+
+
+    /* Chrome, Safari, Edge, Opera */
+    .jobPostFilter::-webkit-outer-spin-button,
+    .jobPostFilter::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.jobPostFilter[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.jobPostFilter::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: rgb(17 17 17 / 27%);
+  opacity: 1; /* Firefox */
+}
+
+.jobPostFilter:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: rgb(17 17 17 / 27%);
+}
+
+.jobPostFilter::-ms-input-placeholder { /* Microsoft Edge */
+   color: rgb(17 17 17 / 27%);
+}
+
+.error::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ff585886;
+ opacity: 1; /* Firefox */
+}
+
+.error:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ff585886;
+}
+
+.error::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ff585886;
+}
+
+.c-formContainer-max{
+  width: 100%;
+  position: relative;
+}
+
+
+.filterPost{
+  width: 73%;
+}
+
+.error{
+  color: #ff585886;
+}
+
+.errorMessage{
+  position: absolute;
+    margin-top: 3rem;
+    text-align: initial;
+    padding-left: 3%;
+    font-size: 13px;
+    font-weight: 400;
+    color: #ff0000ab;
+    width: 100%;
+}

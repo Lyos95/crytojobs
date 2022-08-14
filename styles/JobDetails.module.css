@@ -1,0 +1,518 @@
+@import url('http://fonts.cdnfonts.com/css/sofia-pro');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+@font-face {
+    font-family: ComicSans;
+    src: url('./fonts/comic-sans-ms.ttf');
+  }
+
+  .twitterAcc {
+    position: absolute;
+    width: 1.7rem;
+    right: 5%;
+    top: 2rem;
+    cursor: pointer;
+  }
+  
+.wave{
+    position: absolute;
+    transform: rotate(180deg);
+}
+
+.jobDescriptionContainer{
+
+    justify-content: center;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    padding-bottom:10rem;
+}
+
+
+.logoDescription{
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 7rem;
+  }
+
+.jobDescriptionLogoContainer{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    width: 13rem;
+    height: 13rem;
+    background-color: white;
+    border-radius: 8rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+}
+
+.twitter{
+    width: 9rem;
+    place-self: center;
+}
+
+.jobDescriptionText{
+    text-align: center;
+    margin-top: 9.2rem;
+    padding: 0 2rem;
+    margin-top: 9.2rem;
+}
+
+.jobDescriptionTitle{
+    font-size: 3.1rem;
+    font-family: 'Sofia Pro', sans-serif;
+}
+
+.jobDescriptionSection{
+    margin-top: 4rem;
+    padding: 0 5%;
+    text-align: left;
+    font-family: 'Sofia Pro', sans-serif;
+}
+
+.jobDescriptionSection h3{
+    font-size: 31px;
+    font-weight: 700;
+    color: #0c0c0c;
+    font-family: "ComicSans", "Comic Sans", cursive;
+}
+
+.jobDescriptionSection p{
+    line-height: 26px;
+    font-weight: 400;
+    color: rgb(119, 131, 143);
+    font-size: 16px;
+}
+
+.jobDescriptionApply{
+    background: #fcd535;
+    display: inline-block;
+    padding: 1.4rem 6rem;
+    font-family: "ComicSans", "Comic Sans", cursive;
+    font-size: 31px;
+    font-weight: 700;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.jobDescriptionApply:hover{
+    background: #f8cb16;
+}
+
+.jobDescriptionDetailIcon{
+    width: 22px;
+    margin-right: 6px;
+
+}
+
+.jobDescriptionDetail{
+    display: flex;
+    color: #a2a2a2;
+    align-items: center;
+}
+
+.jobDescriptionDetails{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 2.4rem;
+}
+
+.jobDescriptionTags{
+    text-align: left;
+    margin-top: 3rem;
+}
+
+.jobDescriptionApplyBottom{
+    display: inline-block;
+    background: #fcd535;
+    padding: 1rem 3rem;
+    border-radius: 18px;
+    font-size: 21px;
+    font-family: "ComicSans", "Comic Sans", cursive;
+    float: right;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.jobDescriptionApplyBottom:hover{
+    background: #f8cb16;
+}
+
+
+
+.jobPostInputTitle{
+    text-align: initial;
+    padding-left: 12%;
+    color: #7f7f7f;
+    margin-top: 3.6rem;
+}
+
+.jobPostContainer{
+    padding-bottom: 7vw;
+    box-shadow: rgb(221 221 221) 0px 0px 0px 1px, rgb(0 0 0 / 7%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 1.5px 0px;
+    padding-top: 0.1rem;
+    border-radius: 1rem;
+}
+
+.jobPostTitle{
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 5px 0px, rgb(0 0 0 / 10%) 0px 0px 1px 0px;
+    width: fit-content;
+    padding: 4px 13px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -56%);
+    border-radius: 1rem;
+    display: block;
+    z-index: 71;
+    background: white;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.jobPostFilter {
+    background: #f7f7f7;
+    color: rgb(17 17 17 / 27%);
+}
+
+.jobPostForm{
+    background: #f7f7f7;
+    border: none !important;
+    border: none;
+    box-shadow:rgb(0 0 0 / 2%) 0px 1px 3px 0px, rgb(27 31 35 / 15%) 0px 0px 0px 1px;
+}
+
+.wavePost {
+    transform: translateY(-1px) rotate(180deg);
+   
+}
+
+.wavePost path{
+    fill: #121418;
+
+    
+}
+
+  .astro{
+    width: 112px;
+    height: 150px;
+    z-index: 0;
+
+    position: absolute;
+    transform: translateY(11px);
+    
+    animation: astroskyAnimation .5s ease-out 6s 1 normal forwards;
+}
+
+
+
+  @keyframes boingAnimation{
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(1rem);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+  }
+
+  @keyframes boingLunaAnimation{
+    0%{
+        transform: translateY(100px);
+    }
+
+    50%{
+        transform: translateY(120px);
+    }
+
+    100%{
+        transform: translateY(100px);
+    }
+  }
+
+  @media only screen and (max-width: 1600px) {
+    @keyframes boingLunaAnimation{
+        0%{
+            transform: translateY(60px);
+        }
+    
+        50%{
+            transform: translateY(70px);
+        }
+    
+        100%{
+            transform: translateY(60px);
+        }
+      }
+
+}
+
+  @keyframes bottomDescriptionAnimation{
+    0%{
+        transform: translateY(157px);
+    }
+
+
+    
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+  }
+
+
+.tierra{
+    position: absolute;
+    width: 7vw;
+    left: 0;
+    margin-left: 2rem;
+    transform: translateY(0px);
+    animation: boingAnimation 3s ease-in-out 0s infinite normal;
+}
+
+.luna{
+    position: absolute;
+    width: 4vw;
+    right: 0;
+    margin-right: 11%;
+    transform: translateY(0px);
+    animation: boingLunaAnimation 3s ease-in-out 0s infinite normal;
+    
+}
+
+
+
+.bottomJobDescription{
+    display: flex;
+    width: 100%;
+    height: 16vh;
+    position: fixed;
+    background-color: rgb(255 255 255);
+    bottom: 0;
+    z-index: 999;
+    border-top: 1px solid #ddd;
+    box-shadow: rgb(0 0 0 / 7%) 0px 1px 2px, rgb(0 0 0 / 7%) 0px 2px 4px, rgb(0 0 0 / 7%) 0px 4px 8px, rgb(0 0 0 / 7%) 0px 8px 16px, rgb(0 0 0 / 7%) 0px 16px 32px, rgb(0 0 0 / 7%) 0px 32px 64px;
+    place-content: space-evenly;
+    align-items: center;
+    transform: translateY(157px);
+    animation: bottomDescriptionAnimation 1.6s ease-in 0s 1 normal forwards;
+}
+
+.previewContainer{
+
+}
+
+.previewPostSeparator{
+
+}
+
+.previewPost{
+    font-size: 2.2rem;
+    font-weight: 500;
+    background: #ff5858;
+    padding: 1.3rem 2rem;
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.previewPost:hover{
+    background: #ff2525;
+}
+
+.jobDescriptionPaperContainer{
+    width: 73%;
+    padding-bottom: 5rem;
+    background: white;
+    position: relative;
+    display: block;
+    margin-top: 8rem;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.jobDescriptionPaperContainerPost{
+    width: 67rem;
+    padding-bottom: 5rem;
+    background: white;
+    position: relative;
+    display: block;
+    margin-top: 8rem;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media only screen and (max-width: 1150px) {
+    .jobDescriptionPaperContainerPost{
+        width: 95%;
+    }
+  }
+
+@media only screen and (max-width: 700px) {
+    .jobDescriptionPaperContainer{
+        width: 90%;
+    }
+
+    .jobDescriptionLogoContainer{
+        width: 27vw;
+        height: 27vw;
+    }
+
+    .twitter{
+        width: 21vw;
+    }
+  }
+
+  .jobDescriptionContainer svg{
+
+}
+
+  @media only screen and (max-width: 1050px) {
+    .jobDescriptionContainer > svg{
+        overflow:hidden;
+        height: 21rem;
+    }
+
+    .jobDescriptionTitle{
+        font-size: 5vw;
+    }
+
+    .jobDescriptionText{
+        margin-top: 19%;
+    }
+
+  }
+
+
+
+  @media only screen and (max-width: 950px) {
+    .jobDescriptionText{
+        margin-top: 22%;
+    }
+
+    .jobDescriptionDetail{
+        font-size: 90%;
+
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .jobDescriptionText{
+        margin-top: 22%;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .previewPost{
+        text-align: center;
+    }
+
+    .bottomJobDescription{
+        display: grid;
+        height: 26vh;
+
+    }
+}
+
+
+  @media only screen and (max-width: 700px) {
+    .jobDescriptionTitle{
+        font-size: 6vw;
+    }
+  .jobDescriptionText{
+    margin-top: 22%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+
+    .jobDescriptionDetail{
+        font-size: 70%;
+
+    }
+}
+@media only screen and (max-width: 700px) {
+
+    .jobPostInputTitle{
+        font-size: 0.7rem;
+    }
+    .jobPostTitle{
+        font-size: 12px;
+    }
+    .editorjs{
+        height: 1vw;
+    }
+}
+
+
+  @media only screen and (max-width: 499px) {
+    .jobDescriptionContainer svg{
+        overflow:hidden;
+    }
+
+    .jobDescriptionDetail{
+        font-size: 8px;
+        width: 6rem;
+        justify-content: center;
+        font-weight: 500;
+    }
+
+    .jobDescriptionDetail svg{
+        width: 13px;
+    }
+    .jobDescriptionDetails{
+        gap: 17px;
+        justify-content: center;
+    }
+
+    .jobDescriptionApply{
+        background: #fcd535;
+        display: inline-block;
+        padding: 1rem 3rem;
+        font-family: "ComicSans", "Comic Sans", cursive;
+        font-size: 20px;
+        font-weight: 700;
+        border-radius: 1rem;
+    }
+
+    .jobDescriptionSection h3{
+        font-size: 23px;
+        font-weight: 700;
+        color: #0c0c0c;
+        font-family: "ComicSans", "Comic Sans", cursive;
+    }
+
+    .jobDescriptionSection p{
+        line-height: 26px;
+        font-weight: 400;
+        color: rgb(119, 131, 143);
+        font-size: 13px;
+    }
+
+    .jobDescriptionSection{
+        margin-top: 3rem;
+    }
+
+    /* .jobDescriptionDetail{
+        font-size: 6px;
+        width: 7rem;
+        justify-content: center;
+        font-weight: 500;
+    }
+
+    .jobDescriptionDetail svg{
+        width: 15px;
+    }
+    .jobDescriptionDetails{
+        gap: 16px;
+        justify-content: center;
+    } */
+  }
+  

@@ -1,0 +1,24 @@
+.textArea{
+    position: relative;
+    width: 93%;
+    height: 171px;
+    padding: 1rem;
+    resize: none;
+    border-radius: 10px;
+    border: 5px rgb(96 96 96 / 30%) solid;
+}
+
+.container{
+    width: 79%;
+    position: relative;
+    margin-top: 1.4rem;
+    display: inline-block;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .textArea{
+        font-size: 12px;
+    }
+}
+

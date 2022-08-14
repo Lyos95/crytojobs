@@ -1,0 +1,271 @@
+.c-checkbox {
+  display: none;
+}
+.c-checkbox:not(:checked) + .c-formContainer .c-form {
+  width: 30vw;
+}
+
+@media only screen and (max-width: 900px) {
+  .c-checkbox:not(:checked) + .c-formContainer .c-form {
+    width: 52vw;
+  }
+  .emailForm {
+    transform: translate(-50%, 0%);
+  }
+}
+.c-checkbox:not(:checked) + .c-formContainer .c-form__toggle {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.7);
+}
+.c-checkbox:not(:checked) + .c-formContainer .c-form__input,
+.c-checkbox:not(:checked) + .c-formContainer .c-form__buttonLabel {
+  /*transition: 0.2s 0.1s;*/
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.c-checkbox:checked
+  + .c-formContainer
+  .c-form__input:required:valid
+  ~ .c-form__toggle::before,
+.c-checkbox:not(:checked)
+  + .c-formContainer
+  .c-form__input:required:valid
+  ~ .c-form__toggle::before {
+  content: "Subscribed!";
+}
+.c-checkbox:checked
+  + .c-formContainer
+  .c-form__input:required:valid
+  ~ .c-form__toggle {
+  pointer-events: none;
+  cursor: default;
+}
+.c-formContainer,
+.c-form,
+.c-form__toggle {
+  width: 14vw;
+  height: 5vw;
+}
+
+@media only screen and (max-width: 900px) {
+  .c-formContainer,
+  .c-form,
+  .c-form__toggle {
+    width: 19vw;
+    height: 7vw;
+  }
+}
+.c-formContainer {
+  position: relative;
+  font-weight: 700;
+}
+.c-form,
+.c-form__toggle {
+  position: absolute;
+  border-radius: 6.25em;
+  background-color: #ffffff;
+  /*transition: 0.2s;*/
+}
+.c-form {
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.55vw;
+  box-sizing: border-box;
+  box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+.c-form__toggle {
+  color: rgba(0, 0, 0, 0.685);
+  top: 0;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-form__toggle::before {
+  font-size: 1.45vw;
+  content: attr(data-title);
+}
+
+@media only screen and (max-width: 900px) {
+  .c-form__toggle::before {
+    font-size: 2.45vw;
+  }
+}
+.c-form__input,
+.c-form__button {
+  font: inherit;
+  border: 0;
+  outline: 0;
+  border-radius: 5em;
+  box-sizing: border-box;
+}
+
+.c-form__button {
+  cursor: pointer;
+}
+
+.c-form__input,
+.c-form__buttonLabel {
+  font-size: 1.45vw;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.7);
+  transition: 0s;
+}
+
+@media only screen and (max-width: 900px) {
+  .c-form__input,
+  .c-form__buttonLabel {
+    font-size: 2.45vw;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.7);
+    transition: 0s;
+  }
+}
+.c-form__input {
+  color: rgba(0, 0, 0, 0.685);
+  height: 100%;
+  width: 100%;
+  padding: 0 0.714em;
+}
+.c-form__input::placeholder {
+  color: currentColor;
+}
+.c-form__input:required:valid {
+  color: rgba(0, 0, 0, 0.685);
+}
+.c-form__input:required:valid + .c-form__buttonLabel {
+  color: rgba(0, 0, 0, 0.9);
+}
+.c-form__input:required:valid + .c-form__buttonLabel::before {
+  pointer-events: initial;
+}
+.c-form__buttonLabel {
+  color: rgb(0 0 0 / 63%);
+  height: 100%;
+  width: auto;
+}
+.c-form__buttonLabel::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  cursor: pointer;
+}
+.c-form__button {
+  color: inherit;
+  padding: 0;
+  height: 100%;
+  width: 10vw;
+  background-color: #e6c331;
+}
+
+@media only screen and (max-width: 900px) {
+  .c-form__button {
+    width: 15vw;
+  }
+}
+
+.c-formContainerFilter {
+    height: 2.5vw;
+  }
+  
+  .c-checkbox:not(:checked) + .c-formContainer .filter-container {
+    width: 51rem;
+    border: 2px solid;
+    height: 3rem;
+    z-index: 8;
+  }
+  
+  .c-form-formContainer-filter {
+    height: 0;
+  }
+  
+  .filter {
+    justify-self: center;
+  }
+  
+  .blackButton {
+      background-color: #0b0e11;
+      color: white;
+    }
+  
+  
+    
+  .c-form__buttonLabelReduced {
+      font-size: 1.2rem;
+      height: 2.2rem;
+      width: 6rem;
+      position: relative;
+      align-self: center;
+      cursor: pointer;
+    }
+  
+    
+  .reducedFont {
+      font-size: 1.2rem;
+    }
+  
+    .autosuggestion {
+      list-style-type: none; /* Remove bullets */
+      padding: 0; /* Remove padding */
+      margin: 0; /* Remove margins */
+      background: #fbfbfb;
+      width: 100%;
+      position: absolute;
+      transform: translateY(36px);
+      z-index: 9;
+      display: inline-block;
+      border-radius: 1rem;
+      padding: 1rem;
+      gap: 0.4rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px, rgb(51 51 51) 0px 0px 0px 2px;
+    
+    }
+    
+    .autosuggestion li {
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .selected {
+      background: #a2ccf7;
+      border-radius: 7px;
+    }
+    
+    @media only screen and (max-width: 800px) {
+      .reducedFont {
+        font-size: 2.2vw;
+      }
+    }
+    
+    @media only screen and (max-width: 800px) {
+      .c-form__buttonLabelReduced {
+        font-size: 2.2vw;
+        height: 4.5vw;
+        width: 11vw;
+        position: relative;
+        align-self: center;
+      }
+    }
+  
+    @media only screen and (max-width: 900px) {
+      .c-checkbox:not(:checked) + .c-formContainer .filter-container {
+        width: 91vw;
+        border: 0.6px solid;
+        height: 6vw;
+      }
+    }
+  
+  
+  
+  

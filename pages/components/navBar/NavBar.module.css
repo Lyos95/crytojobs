@@ -1,0 +1,58 @@
+.landingNav {
+  display: flex;
+  padding: 1.2rem 1rem;
+  background-color: #121418;
+  z-index: 4;
+  position: relative;
+}
+
+.landingNavLogo {
+  margin-right: auto;
+}
+
+.landingNavPostJob {
+  padding: 7px 15px;
+  border-radius: 10px;
+  box-shadow: none;
+  background-image: none;
+  background-color: rgb(252, 213, 53);
+  opacity: 0.9;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: rgb(222 217 66 / 52%) 0px 1px 15px;
+  cursor: pointer;
+}
+
+.landingNavLearn {
+  padding: 7px 15px;
+  border-radius: 10px;
+  box-shadow: none;
+  background-image: none;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.9;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.landingNavSubcontainer {
+  display: flex;
+  gap: 6px;
+}
+
+@media only screen and (max-width: 480px) {
+  .landingNavPostJob {
+    padding: 8px 8px;
+    align-self: center;
+    font-size: 12px;
+  }
+
+  .landingNavLearn {
+    padding: 8px 8px;
+    align-self: center;
+    font-size: 12px;
+  }
+
+  .landingNav {
+    padding: 0.6rem 1rem;
+  }
+}

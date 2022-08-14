@@ -1,0 +1,516 @@
+.editorjs {
+  border: 6px rgb(99, 99, 99) solid;
+  border-radius: 10px;
+  height: 647px;
+  width: 84%;
+  margin-top: -3px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  overflow: inherit;
+  overflow-x: hidden;
+  padding: 30px 2rem;
+}
+
+.titleDescription{
+  border: 1px solid black;
+  border-radius: 7px;
+  height: 2.3rem;
+  width: 99%;
+}
+
+.textDescription{
+  width: 100%;
+  min-height: 12rem;
+  padding: 1rem 1rem;
+  resize: none;
+}
+
+.jobPostTagsContainer {
+  display: flex;
+  margin-top: 1.4rem;
+  padding-left: 15%;
+  flex-flow: row wrap;
+  row-gap: 0.7rem;
+}
+
+.twitterAcc {
+  position: absolute;
+  width: 1.7rem;
+  right: 5%;
+  top: 2rem;
+  cursor: pointer;
+}
+
+.jobPostTagsContainer > div {
+  margin-right: 1rem;
+  border: solid 3px black;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  position: relative;
+  width: fit-content;
+  padding: 0.36rem 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
+    rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+}
+
+.buttonJobDescription{
+  font-size: 1.8rem;
+  text-align: center;
+  background: #fcd53599;
+  display: grid;
+  position: relative;
+  padding: 0.7rem 0;
+  width: 68%;
+  border-radius: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.descriptionContainer{
+  position: relative;
+  padding-top: 1rem;
+}
+
+.crossDescription{
+  font-size: 27px;
+  font-weight: 600;
+  border: 2px solid black;
+  border-radius: 3rem;
+  background-color: rgba(255, 0, 0, 0.534);
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  right: 0;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+.logoDescription{
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 7rem;
+}
+
+.crossDescription:hover{
+  background-color: rgba(255, 0, 0, 0.734);
+}
+
+.buttonJobDescription:hover{
+  background: #fcd435c7;
+}
+
+.salaryRange {
+  margin-top: 1rem;
+  display: flex;
+  padding-left: 3.2rem;
+  place-content: space-between;
+  margin-left: 7rem;
+}
+.salaryRange > div > div > form {
+  width: fit-content !important;
+}
+
+.salaryRange ul {
+  position: absolute;
+  margin-top: 0.4rem;
+  width: 111%;
+  left: 0;
+  transform: none;
+}
+
+.logoRemove{
+  width: 116px;
+    height: 36px;
+    border: 2px solid;
+    border-radius: 5rem;
+    margin-left: 17rem;
+    margin-top: 8.2rem;
+    display: grid;
+    align-content: center;
+    background: #f7f7f7;
+    cursor: pointer;
+    position: absolute;
+}
+
+.logoRemove:hover{
+  background: #e3e3e3;
+  color: rgb(99 99 99);
+  border-color: black;
+}
+
+.salaryRange div {
+  margin-right: 3rem;
+  width: 12rem;
+  margin-top: 0;
+  place-content: baseline;
+}
+
+.logoContainer {
+  width: 150px;
+  height: 150px;
+  border: 3px solid;
+  border-radius: 5rem;
+  margin-left: 7rem;
+  margin-top: 1.2rem;
+  display: grid;
+  align-content: center;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+.logoContainer:hover {
+  opacity: 0.5;
+}
+
+.logo {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logoOpacity {
+  opacity: 0.5;
+}
+
+.colorpicker {
+  margin-left: 12%;
+  border-color: #cfcfcf;
+  border-radius: 15%;
+  float: left;
+  margin-top: 1rem;
+}
+
+.colorpickerContainer {
+  background-color: #3f3f3f;
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 22px;
+  margin-left: 6px;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background: white;
+  border: 2px solid #393939;
+  color: black;
+  border-radius: 25%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background: white;
+  border: 2px solid #393939;
+  color: black;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "\2713";
+  position: absolute;
+  display: none;
+  padding-left: 4px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radioContainer {
+  text-align: initial;
+  margin-top: 2rem;
+}
+
+.header {
+  font-size: 1rem;
+  padding-top: 2px;
+  font-weight: 600;
+  color: #282828;
+}
+
+.header > span {
+  color: rgb(221, 86, 86);
+}
+
+.jobPostSelector {
+  width: 51rem;
+  height: 3rem;
+  background: #f7f7f7;
+  position: relative;
+  border-radius: 6rem;
+  box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px,
+    rgb(27 31 35 / 15%) 0px 0px 0px 1px;
+  cursor: pointer;
+}
+
+.jobPostSelectorContainer {
+  width: 51rem;
+  display: inline-block;
+  position: relative;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.salaryRangeInputMax {
+  margin-left: 3rem;
+}
+.subInfo {
+  position: relative;
+  display: block;
+  margin-top: 3.3rem;
+  font-size: 13px;
+  left: 0;
+  text-align: left;
+  padding-left: 15%;
+  color: #5958589c;
+  max-width: 88%;
+}
+
+.checkContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  justify-content: right;
+  font-weight: 600;
+  color: #4d4d4d;
+}
+
+.checkContainerJob {
+  display: flex;
+  margin-left: 15%;
+  flex-flow: row wrap;
+  margin-top: auto;
+  margin-top: 1.5rem;
+  row-gap: 7px;
+  column-gap: 2%;
+}
+
+.salaryRange input {
+  width: 17rem;
+}
+.separator {
+  margin-bottom: 24px;
+}
+
+.jobDescriptionTitlePost {
+  padding-top: 9rem;
+}
+.titleSeparator {
+  text-align: initial;
+  padding-left: 12%;
+  margin-bottom: -6px;
+  color: #7f7f7f;
+  margin-top: 1.6rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .jobDescriptionTitlePost {
+    padding-top: 19vw;
+  }
+  .titleSeparator {
+    text-align: initial;
+    padding-left: 12%;
+    margin-bottom: -6px;
+    color: #7f7f7f;
+    margin-top: 1.6rem;
+  }
+  .separtorText {
+    font-size: 13px;
+  }
+
+  .separator {
+    margin-bottom: 14px;
+  }
+
+  .logoRemove{
+    margin-left: 36%;
+    margin-top: 5.2rem;
+    width: 18vw;
+    height: 6vw;
+    font-size: 14px;
+  }
+
+  .logoContainer {
+    margin-left: 11%;
+    width: 19vw;
+    height: 19vw;
+    font-size: 13px;
+  }
+  .jobPostTagsContainer > div {
+    border: solid 2px black;
+    font-size: 12px;
+    padding: 0.3rem 0.7rem;
+  }
+  .checkContainer {
+    font-size: 11.7px;
+    margin-left: 0rem;
+  }
+
+  .container {
+    margin-bottom: 16px;
+  }
+
+  .checkmark {
+    height: 15px;
+    width: 15px;
+  }
+
+  .checkmark:after {
+    font-size: 10px;
+    padding-left: 2px;
+  }
+}
+
+.separatorCompany {
+  margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .subInfo {
+    margin-top: 5vw;
+    font-size: 66%;
+  }
+
+  .separatorCompany {
+    margin-bottom: 9%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .subInfo {
+    margin-top: 6.6vw;
+    font-size: 66%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .separatorCompany {
+    margin-bottom: -2%;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .salaryRange {
+    flex-direction: column;
+    row-gap: 1.7rem;
+    padding-left: 0;
+    margin-left: 17%;
+  }
+  .salaryRange input {
+    width: 42vw;
+  }
+  .salaryRangeInputMax {
+    margin-left: 0;
+  }
+  .salaryRange div {
+    width: 42vw;
+  }
+  .salaryRange > div > div > form {
+    width: 100% !important;
+    justify-content: left;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .salaryRange {
+    flex-direction: column;
+    row-gap: 2.4vw;
+    margin-left: 18%;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .salaryRange {
+    margin-left: 17%;
+  }
+
+  .separatorCompany{
+    margin-bottom: 0rem;
+  }
+
+  .separatorCompanyLast{
+    margin-bottom: 0.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 620px) {
+
+  .editorjs {
+    padding: 3px 2rem;
+    border: 2px rgb(99, 99, 99) solid;
+    height: 488px;
+  }
+  .crossDescription{
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 3rem;
+    background-color: rgba(255, 0, 0, 0.534);
+    color: white;
+    width: 1.7rem;
+    height: 1.7rem;
+    display: grid;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    line-height: 19px;
+    cursor: pointer;
+  }
+
+  .textDescription{
+    min-height: 10rem;
+  }
+
+  .buttonJobDescription{
+    font-size: 1.2rem;
+    padding: 0.6rem 0;
+    width: 62%;
+  }
+}
+
+
+
