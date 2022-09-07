@@ -21,27 +21,32 @@ export default async function getJob(
   const buf = await buffer(request);
   const payload = request.body;
   const sig = request.headers['stripe-signature'];
-
+  
   let event;
-
   try {
     event = stripe.webhooks.constructEvent(buf, sig, endpointSecret);
   } catch (err:any) {
     return response.status(400).send(`Webhook Error: ${err.message}`);
   }
   let subscription;
-  console.log(event.type);
   switch(event.type){
     case 'checkout.session.completed':
       subscription = event.data.object;
-      
-      console.log('checkout.session.completed');
-      console.log(subscription)
-    case 'payment_intent.succeeded':
-      console.log('payment_intent.succeeded');
-       subscription = event.data.object;
-       console.log(subscription)
-    default:
+
+      console.log('-----------------------invoice.paid-----------------------')
+      console.log(subscription.subscription);
+      const subscriptionID = subscription.subscription;
+      const jobIdMetadata = subscription.metadata.job;
+      connectMongo();
+      const job = await JobCard.findOne({ id: jobIdMetadata });
+      if(job){
+        job.subscriptionId = subscriptionID;
+        job.state = 'live';
+        await job.save();
+      }
+
+
+      default:
       console.log('default');
   }
 

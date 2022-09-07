@@ -77,6 +77,13 @@ const sendEmail = (email: string,props:any) => {
     return {mailOptions: mailOptions,transporter: transporter};
 };
 
+export const config = {
+  api: {
+      bodyParser: {
+          sizeLimit: '4mb' // Set desired value here
+      }
+  }
+}
 
 export default async function getPostsPage(
   req: NextApiRequest,
@@ -84,12 +91,12 @@ export default async function getPostsPage(
 ) {
   const body:any = req.body;
   
-  console.log(body.list)
+  console.log(body)
 
 
 
   connectMongo();
-
+console.log('Connected to mongo')
   
 
  
@@ -115,26 +122,30 @@ export default async function getPostsPage(
     customBrandColor: body.customBrandColor,
     brandColor: body.brandColor,
     sticky: body.sticky,
-    logo: body.images[0],
-    imagePurchased: body.images[0] ? true : false,
+    logo: body?.images[0]?.["data_url"],
+    imagePurchased: body?.images[0] ? true : false,
     price: body.price,
     jobDescription: body.jobDescription,
     specifySalary: body.specifySalary,
     searchTags: [body.tag1, body.tag2, body.tag3, body.tag4, body.tag5, body.jobType,body.jobOfficePolicy],
     code: (Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15))
   });
-  
+  console.log('newJobPost generated')
   let randomID = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   let randomIDEdit = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  console.log('randomID generated');
   let jobPostFound = await JobCard.find({'id': randomID});
+  console.log('jobPostFound generated');
   let jobPostEditFound = await JobCard.find({'id': randomIDEdit});
-
+  console.log('jobPostEditFound generated');
   while(jobPostFound.length > 0 && jobPostEditFound.length > 0 ) {
+    console.log('Inside the while loop')
     randomID = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)+Math.random().toString(36).substring(2, 15)+Math.random().toString(36).substring(2, 15);
     randomIDEdit = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)+Math.random().toString(36).substring(2, 15)+Math.random().toString(36).substring(2, 15);
     jobPostFound = await JobCard.find({'id': randomID});
     jobPostEditFound = await JobCard.find({'id': randomIDEdit});
   }
+  console.log('outside the while loop')
   newJobPost.id = randomID;
   newJobPost.idEdit = randomIDEdit;
   newJobPost.state = 'pending';
@@ -149,8 +160,8 @@ export default async function getPostsPage(
   //     transporter.sendMail(mailOptions)
   //   }
   // })
-   await newJobPost.save();
-
+ 
+  console.log('saved')
    const session = await stripe.checkout.sessions.create({
     mode: "subscription",
     success_url: 'http://localhost:3000/thankyouPage',
@@ -159,8 +170,12 @@ export default async function getPostsPage(
     metadata: {
       job: String(newJobPost.id)
     }
-  })
+  });
+  newJobPost.stripeUrl = session.url;
+  console.log('BEFORE SAVING',body?.images[0]);
+  console.log('SAVED',newJobPost)
+  await newJobPost.save();
   res.status(200).json({ status: 'Completed', url: session.url })
-  console.log(session)
+
   // res.status(200).json({ status: 'Completed' })
 }

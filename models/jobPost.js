@@ -92,7 +92,7 @@ const JobCardSchema = new Schema({
       type: String
     },
     logo: {
-      type: Object | null | undefined
+      type: String
     },
     price: {
       type: String
@@ -117,6 +117,9 @@ const JobCardSchema = new Schema({
       type: Date
     },
     stripeSessionId: {
+      type: String
+    },
+    subscriptionId: {
       type: String
     },
     stripeUrl: {

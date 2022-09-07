@@ -15,11 +15,9 @@ export default async function getPostsPage(
   console.log('FILTERS',filters)
   let jobs;
   if(filters.length === 0){
-    jobs = await JobCard.find().sort({ sticky: -1, creationDate: -1 }).skip((parseInt(page) - 1) * 10).limit(10);
+    jobs = await JobCard.find().sort({ sticky: 1, creationDate: -1 }).skip((parseInt(page) - 1) * 10).limit(10);
   }else{
-
-    jobs = await JobCard.find({searchTags: { $all: filters }}).sort({ sticky: -1, creationDate: -1 }).skip((parseInt(page) - 1) * 10).limit(10);
-
+    jobs = await JobCard.find({searchTags: { $all: filters }}).sort({ sticky: 1, creationDate: -1 }).skip((parseInt(page) - 1) * 10).limit(10);
   }
   res.status(200).json({ status: 'Completed', jobs })
 }

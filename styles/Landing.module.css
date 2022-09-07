@@ -228,6 +228,7 @@
   gap: 17px;
   align-items: center;
   padding-top: 7px;
+  margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 499px) {

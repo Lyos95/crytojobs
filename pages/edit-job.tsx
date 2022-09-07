@@ -25,6 +25,7 @@ import * as yup from 'yup';
 import axios from "axios";
 import { useRouter } from 'next/router'
 import ConfirmationModal from "./components/confirmationModal/confirmationModal";
+import getAllTags from "../utils/tags";
 //https://codepen.io/bertdida/pen/xyPKRX
 
 const JobPost: NextPage = () => {
@@ -436,12 +437,7 @@ const getTags = () => {
                         formik.setFieldValue("tag1", value);
                       }}
                       type="Tag 1"
-                      options={[
-                        "Full Time",
-                        "Part Time",
-                        "Intership",
-                        "Temporal",
-                      ]}
+                      options={getAllTags()}
                       selectedOption={formik.values.tag1}
                     />
                     <ChipConfigComponent
@@ -449,12 +445,7 @@ const getTags = () => {
                         formik.setFieldValue("tag2", value);
                       }}
                       type="Tag 2"
-                      options={[
-                        "Full Time",
-                        "Part Time",
-                        "Intership",
-                        "Temporal",
-                      ]}
+                      options={getAllTags()}
                       selectedOption={formik.values.tag2}
                     />
                     <ChipConfigComponent
@@ -462,12 +453,7 @@ const getTags = () => {
                         formik.setFieldValue("tag3", value);
                       }}
                       type="Tag 3"
-                      options={[
-                        "Full Time",
-                        "Part Time",
-                        "Intership",
-                        "Temporal",
-                      ]}
+                      options={getAllTags()}
                       selectedOption={formik.values.tag3}
                     />
                     <ChipConfigComponent
@@ -475,12 +461,7 @@ const getTags = () => {
                         formik.setFieldValue("tag4", value);
                       }}
                       type="Tag 4"
-                      options={[
-                        "Full Time",
-                        "Part Time",
-                        "Intership",
-                        "Temporal",
-                      ]}
+                      options={getAllTags()}
                       selectedOption={formik.values.tag4}
                     />
                     <ChipConfigComponent
@@ -490,30 +471,7 @@ const getTags = () => {
                       type="Tag 5"
                       filter={true}
                       selectedOption={formik.values.tag5}
-                      options={[
-                        "Full Time",
-                        "Part Time",
-                        "Intership",
-                        "Temporal",
-                        //generate random strings
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                        Math.random().toString(36).substring(2, 15),
-                      ]}
+                      options={getAllTags()}
                     />
                   </div>
                   <span

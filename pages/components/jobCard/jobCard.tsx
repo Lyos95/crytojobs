@@ -59,7 +59,7 @@ const JobCard: NextPage<Props> = ({
             <div
             className={styles.iconCardLogo}
             style={{
-              backgroundImage: jobImg ? `url(${jobImg["data_url"]})` : "",
+              backgroundImage: jobImg ? `url(${jobImg})` : "",
             }}
           />
           )

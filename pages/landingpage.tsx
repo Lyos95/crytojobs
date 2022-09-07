@@ -20,6 +20,7 @@ const Landing: NextPage = () => {
   let page = 1;
   const [items, setItems] = useState<JobsPage>([]);
   const [chips, setChips] = useState<Array<string>>([]);
+  const [hasMoreJobs, setHasMoreJobs] = useState<boolean>(true);
 
   useEffect(() => {
     fetchData();
@@ -35,7 +36,9 @@ const Landing: NextPage = () => {
       page: page,
       filters: chips
     });
-
+    if(jobs?.data?.jobs.length < 10){
+      setHasMoreJobs(false);
+    }
     if(page === 1) {
       console.log('RESETING STATE')
       console.log(jobs.data.jobs)
@@ -72,7 +75,7 @@ const Landing: NextPage = () => {
         className={styles.jobList}
         dataLength={items.length} //This is important field to render the next data
         next={fetchData}
-        hasMore={true}
+        hasMore={hasMoreJobs}
         loader={<h4>Loading...</h4>}
         scrollThreshold={0.9}
       >

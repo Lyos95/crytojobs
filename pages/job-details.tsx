@@ -97,7 +97,7 @@ const JobDetails: NextPage<Props> = ({id}) => {
                         className={stylesJobDescription.logoDescription}
                         style={{
                           backgroundImage: jobDetails?.logo
-                            ? `url(${jobDetails?.logo["data_url"]})`
+                            ? `url(${jobDetails?.logo})`
                             : "",
                         }}
                       />
