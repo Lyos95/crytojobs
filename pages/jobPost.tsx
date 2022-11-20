@@ -238,11 +238,9 @@ const getTags = () => {
               stylesJobDescription.wavePost,
             ].join(" ")}
           />
-          <img
-            src="/flyastro.png"
-            alt=""
-            className={stylesJobDescription.astro}
-          />
+          <div className={stylesJobDescription.astro}>
+          <object type="image/svg+xml" data="/flying.svg">svg-animation</object>
+        </div>
           <img
             src="/earth.png"
             alt=""

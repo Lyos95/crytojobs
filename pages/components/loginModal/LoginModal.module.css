@@ -1,0 +1,274 @@
+.modalContainer{
+    /* This way it could be display flex or grid or whatever also. */
+    display: grid;
+    grid-template-columns: 40% 60%;
+    
+    /* Probably need media queries here */
+    width: 935px;
+    max-width: 100%;
+    
+    height: 527px;
+    max-height: 100%;
+  
+    position: fixed;
+    
+    z-index: 100;
+    
+    left: 50%;
+    top: 50%;
+    
+    /* Use this for centering if unknown width/height */
+    border: 6px white solid;
+    border-radius: 2rem;
+    transform: translate(-50%, -64%);
+    background: white;
+    
+    /* If known, negative margins are probably better (less chance of blurry text). */
+    /* margin: -200px 0 0 -200px; */
+    
+
+    box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+  }
+  
+  .modalOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    
+    background: rgba(0, 0, 0, 0.86);
+    
+  }
+
+  .modalImageContainer{
+    background-color: #000000f0;
+    position: relative;
+    border-radius: 2rem 2rem 2rem 2rem;
+  }
+
+  .modalFormContainer{
+    position: relative;
+    border-radius: 0rem 2rem 2rem 0;
+    background-color: white;
+  }
+
+  .modalFormTitle{
+    padding: 0 2rem;
+  }
+
+  .boxInput{
+    border: 1px solid black;
+    border-radius: 7px;
+    height: 2.3rem;
+    width: 99%;
+    padding-left: 1rem;
+}
+
+.argoImage{
+  transform: rotate(10deg) translateY(500px);
+  display: grid;
+  align-content: center;
+  animation: float 6s ease-in-out infinite;
+  position: absolute;
+  padding-top: 61px;
+  
+}
+
+.absolute {
+  position: absolute;
+}
+
+.moon {
+  position: absolute;
+  bottom: 0;
+  border-radius: 30px;
+}
+
+.modalFormBody{
+  width: 92%;
+  padding: 0 3rem;
+  border: 1px solid black;
+  padding-left: 22px;
+  margin-left: 1rem;
+  padding-bottom: 1.2rem;
+  border-radius: 18px;
+  z-index: 4;
+  box-shadow: 2px -2px 7px grey;
+}
+
+.buttonLoginContainer {
+}
+
+.buttonLogin {
+  border: black 2px solid;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 11px 19px;
+  border-radius: 9px;
+  margin-top: 20px;
+  margin-right: 0px;
+  margin-left: auto;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 700;
+  border-radius: 1rem;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.buttonLogin:hover{
+transform: translateY(-1px);
+  box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+}
+
+.centerText{
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.customBtn:hover {
+  cursor: pointer;
+}
+span.label {
+  font-family: serif;
+  font-weight: normal;
+}
+span.icon {
+  background: url('/g-normal.png') transparent 5px 50% no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+  height: 42px;
+}
+
+span.iconTwitter {
+  background: url('/twitterIcon.png') transparent 8px 50% no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+  height: 42px;
+}
+
+span.iconLinkedin {
+  background: url('/linkedinIcon.png') transparent 5px 50% no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+  height: 42px;
+}
+
+span.icon {
+  background: url('/g-normal.png') transparent 5px 50% no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+  height: 42px;
+}
+
+span.buttonText {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 11px;
+  font-size: 14px;
+  font-weight: bold;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: 'Roboto', sans-serif;
+}
+.customGPlusSignIn{
+  display: inline-block;
+  background: white;
+  color: #444;
+  width: 122px;
+  border-radius: 5px;
+  border: thin solid #888;
+  box-shadow: 2px 1px 3px grey;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.customGPlusSignIn:hover{
+  transform: translateY(-1px);
+  box-shadow: 2px 2px 5px grey;
+}
+
+.buttonsContainer{
+  display: flex;
+  gap: 1.4rem;
+  margin-top: 3.2rem;
+  margin-bottom: 1.3rem;
+  place-content: space-evenly;
+}
+
+.modalFormHeaderLogin{
+  border: 1px solid black;
+  width: fit-content;
+  margin-left: 1rem;
+  padding-bottom: 0.7rem;
+  padding-top: 0.6rem;
+  border-bottom: 0;
+  transform: translate(21px,2px);
+  background: white;
+  border-bottom-color: cornsilk;
+  border-left-color: #090909;
+  border-right-color: #090909;
+  border-radius: 17px 17px 0 0;
+  z-index: 2;
+  margin-bottom: 0;
+  cursor: pointer;
+  box-shadow: 2px -2px 7px grey;
+}
+
+.modalFormHeaderLogin::after{
+  background-color: white;
+  height: 21px;
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0px;
+}
+
+
+.modalFormHeaderSignup{
+  width: fit-content;
+  margin-left: 1rem;
+  padding-bottom: 0.7rem;
+  padding-top: 0.6rem;
+  border-bottom: 0;
+  transform: translate(21px,2px);
+  background: white;
+  border-radius: 17px 17px 0 0;
+  transform: translate(-26px,1.1px);
+  z-index: 1;
+  background: #f5f5f5;
+  cursor: pointer;
+  border: 1px solid black;
+  border-left-color: #090909;
+  border-right-color: #090909;
+}
+
+.modalHeaderContainer{
+  display: flex;
+}
+
+.modalFormTitle{
+  margin: 0;
+}
+
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+  

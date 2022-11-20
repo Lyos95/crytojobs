@@ -24,6 +24,8 @@ import axios from "axios";
 
 const JobPost: NextPage = () => {
   const [images, setImages] = React.useState([]);
+  const [submitted, setSubmitted] = React.useState(false);
+  
   const formik = useFormik({
     initialValues: {
       companyName: '',
@@ -186,7 +188,7 @@ const JobPost: NextPage = () => {
               <JobCard
                   title={formik.values.position || "Job title"}
                   company={formik.values.companyName || "Company Name"}
-                  jobImg={formik.values.images[0]}
+                  jobImg={formik.values.images[0]['data_url']}
                   id={"s76asd6ad8"}
                   color={
                     formik.values.customBrandColor
@@ -374,6 +376,7 @@ const JobPost: NextPage = () => {
                     onChangeCustom={(value: any) => {
                       formik.setFieldValue("sticky", value);
                     }}
+                    prices = { {STICKY_POST_PRICE_24H,STICKY_POST_PRICE_7D, STICKY_POST_PRICE_14D,STICKY_POST_PRICE_30D} }
                   ></RadioComponent>
                 </div>
                 <div className={stylesJobPost.separatorCompany}>

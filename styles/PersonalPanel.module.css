@@ -1,0 +1,60 @@
+.sidebar{
+    width: 14%;
+    background: #ffffff;
+    position: fixed;
+    border-radius: 19px;
+    margin-top: 22px;
+    height: 87%;
+    margin-left: 36px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+    border: 2px solid;
+}
+
+.color {
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.jobPanel {
+    width: 67%;
+    background: #ffffff;
+    position: fixed;
+    border-radius: 19px;
+    margin-top: 22px;
+    height: 87%;
+    margin-left: 477px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+  }
+
+  .jobPanelTitle{
+    margin-left: 4rem;
+    margin-top: 2rem;
+  }
+
+  .wave{
+    position: absolute;
+    transform: rotate(180deg);
+}
+
+.separator{
+    width: 80%;
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.jobContainer {
+    margin-top: 2rem;
+    padding-top: 3rem;
+    width: 83%;
+    padding-left: 0rem;
+    height: 81%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 13px;
+    display: grid;
+    box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+}

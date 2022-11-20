@@ -3,6 +3,7 @@ import Head from "next/head";
 import Wave from "../public/wave.svg";
 import styles from "../styles/Landing.module.css";
 import NavBar from "./components/navBar/navBar";
+import LoginModal from "./components/loginModal/loginModal";
 import JobCard from "./components/jobCard/jobCard";
 import ChipClosable from "./components/chipClosable/chipClosable";
 import FilterComponent from "./components/filterComponent/filterComponent";
@@ -68,6 +69,7 @@ const Landing: NextPage = () => {
       return number;
     }
   }
+
 
   const renderCards = () => {
     return (
@@ -140,6 +142,7 @@ const Landing: NextPage = () => {
       </Head>
       <main className={styles.main}>
         <NavBar />
+       
         <div className={styles.landingTitleDisplay}>
           <h1 className={styles.landingTitle}>
             <span className={styles.yellow}>Cryptocurrency</span> Jobs
